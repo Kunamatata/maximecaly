@@ -6,6 +6,9 @@
     text-decoration: none;
 }
 
+h1{
+    font-weight: bold;
+}
 
 /*********
 Header
@@ -102,11 +105,43 @@ First Section
 Second Section
 *********/
 
-#education {
+#experience {
+    position: relative;
     width: 100%;
+    height: 75vh;
     min-height: 75vh;
-    background-color: #404040;
     transition: all .5s ease-out;
+}
+
+#experience .top-bar{
+    height: 100px;
+    color: #ffffff;
+    text-align: center;
+    padding: 1% 5%;
+
+    font-size: 52px;
+    background-color: #404040;
+}
+
+#experience .columns h1{
+    text-align: center;
+    font-size: 52px;
+}
+
+#experience .columns:nth-child(2) {
+    background-color: #EF734E;
+}
+
+#experience .columns:nth-child(3) {
+    background-color: #AAF267;
+}
+
+.vertical-center {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 
@@ -116,6 +151,24 @@ Typed Stuff
 
 #typed-greetings {
     font-size: 24px;
+}
+
+/*********
+Column Stuff
+*********/
+
+.columns {
+    float: left;
+    height: 100%;
+}
+
+.one.columns,
+.one.column {
+    width: 100%;
+}
+
+.two.columns {
+    width: 50%;
 }
 
 .hidden {

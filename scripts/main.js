@@ -32,7 +32,7 @@ var greetings = function() {
             onStringTyped: function() {
                 setTimeout(function() {
                     $('html,body').animate({
-                        scrollTop: $("#education").offset().top
+                        scrollTop: $("#experience").offset().top
                     }, 1000);
                 }, 3000);
 
