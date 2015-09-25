@@ -6,9 +6,10 @@
     text-decoration: none;
 }
 
-h1{
+h1 {
     font-weight: bold;
 }
+
 
 /*********
 Header
@@ -75,7 +76,8 @@ First Section
 
 #hero #content {
     width: 100%;
-    text-align: justify margin: 0 auto;
+    text-align: justify;
+    margin: 0 auto;
     padding: 4rem 1rem;
     position: absolute;
     top: 50%;
@@ -93,6 +95,7 @@ First Section
 
 #greetings h1 {
     font-size: 75px;
+    transition: all .7s ease-out;
 }
 
 #greetings .fa.fa-microphone {
@@ -113,17 +116,16 @@ Second Section
     transition: all .5s ease-out;
 }
 
-#experience .top-bar{
+#experience .top-bar {
     height: 100px;
     color: #ffffff;
     text-align: center;
     padding: 1% 5%;
-
     font-size: 52px;
     background-color: #404040;
 }
 
-#experience .columns h1{
+#experience .columns h1 {
     text-align: center;
     font-size: 52px;
 }
@@ -152,6 +154,7 @@ Typed Stuff
 #typed-greetings {
     font-size: 24px;
 }
+
 
 /*********
 Column Stuff
