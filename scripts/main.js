@@ -15,6 +15,15 @@ $(document).ready(function() {
     $("#userIP").text(userIP);
 });
 
+/*
+    The var section has to look like this : #section_name
+    The var milliseconds takes an integer
+*/
+var slideToSection = function(section, milliseconds) {
+    $('html,body').animate({
+        scrollTop: $(section).offset().top
+    }, milliseconds);
+}
 
 var dayOfWeek = "Saturday";
 var dayOfWeekPast = "Sunday";
@@ -23,9 +32,9 @@ var greetings = function() {
     $("#greetings").animate({
         height: 500
     }, 800, function() {
-        $("#greetings h1").css("opacity","0.1");
+        $("#greetings h1").css("opacity", "0.1");
         $("#typed-greetings").typed({
-            strings: ["Hi! I'm Max, nice to meet you^2000 <br> I am a French Software Engineering student in love with video games and programming ! ^1000 <br>I am passionate with the Gaming Industry and I love playing video games.  ^1000<br> I'm actually a hardcore player of Starcraft 2 <br> I swear I go outside too... ^2000 sometimes... ^1000 <br>I've lived 6 years in the U.S.A in OHIO and have always wanted to come back after my studies. "],
+            strings: ["Hi! I'm Max, nice to meet you!^500 <br> I am a Software Engineering Student in love with technology, programming and video games.^500 <br>Usually,^500 when I have free time and nothing planned I will play something.^500 My favorite game is Starcraft 2 and I like it because it's a real time strategy game. I have to think and innovate to win. ^500 <br> I'm in my last year before graduating of 5 years of college and getting my Masters. ^500 <br> I successfully found an Internship last year in Boulder, Colorado in the US. ^500 <br> It was amazing, I met extroadinary people and learned a lot both in technical and social aspects. ^500 <br> I had the chance to work in two different companies, DragonDev and Human Design. ^500<br> Both were different experiences and projects and that gave me broader view of startups in technology and web development. ^500 <br> I really hope to be able to do my last internship at the same place because it was an A^500W^500E^500S^500O^500M^500E adventure and I can't wait to be there!"],
             typeSpeed: 10,
             backDelay: 500,
             loop: false,
@@ -33,10 +42,8 @@ var greetings = function() {
             showCursor: false,
             onStringTyped: function() {
                 setTimeout(function() {
-                    $('html,body').animate({
-                        scrollTop: $("#experience").offset().top
-                    }, 1000);
-                }, 3000);
+                    slideToSection("#experience",500);
+                }, 2000);
 
             }
         });
