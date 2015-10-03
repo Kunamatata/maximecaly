@@ -10,6 +10,11 @@ h1 {
     font-weight: bold;
 }
 
+a {
+    color: #ffffff;
+    transition: all .3s ease-out;
+}
+
 
 /*********
 Header
@@ -19,6 +24,7 @@ header {
     position: absolute;
     top: 0;
     padding: 15px;
+    z-index: 1;
 }
 
 ul {
@@ -45,14 +51,12 @@ header aside .social-icons {
 
 header aside .icons {
     display: inline-block;
-    color: #000000;
-    opacity: .5;
+    color: #ffffff;
     transition: all .3s ease-in;
 }
 
 header aside .icons:hover {
-    opacity: 1;
-    color: #ffffff;
+    opacity: 0.5;
 }
 
 
@@ -60,18 +64,17 @@ header aside .icons:hover {
 First Section
 *********/
 
+#container {
+    width: 100%;
+}
+
 #hero {
     position: relative;
     width: 100%;
     height: 100vh;
-    z-index: -1;
-}
-
-#hero canvas {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    z-index: -1;
+    background-size: cover;
+    background-position: center center;
+    background: url("http://i.ytimg.com/vi/X99USE9m1S4/maxresdefault.jpg");
 }
 
 #hero #content {
@@ -82,14 +85,22 @@ First Section
     position: absolute;
     top: 50%;
     -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     z-index: 50;
 }
 
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    background: #000000
+}
+
 #greetings {
     padding: 5% 10%;
-    color: rgb(77, 77, 77);
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
     transition: all .5s ease-out;
 }
 
@@ -101,6 +112,14 @@ First Section
 #greetings .fa.fa-microphone {
     font-size: 42px;
     margin-right: 20px;
+    z-index: 10;
+    cursor: pointer;
+    transition: all .5s ease-out;
+}
+
+#greetings .fa.fa-microphone:hover {
+    opacity: 0.5;
+    transition: all .5s ease-out;
 }
 
 
@@ -142,7 +161,6 @@ Second Section
     position: relative;
     top: 50%;
     -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
 
@@ -152,7 +170,9 @@ Typed Stuff
 *********/
 
 #typed-greetings {
-    font-size: 24px;
+    font-size: 20px;
+    line-height: 140%;
+    opacity: .9;
 }
 
 
@@ -182,4 +202,100 @@ Column Stuff
 .visible {
     opacity: 1;
     transition: all .5 ease-out;
+}
+
+
+/*********
+Map Stuff
+**********/
+
+#map {
+    width: 100%;
+    height: 65vh;
+}
+
+.hd-icon {
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    background: #63b6e5;
+    text-align: center;
+    line-height: 20px;
+    color: white;
+}
+
+.dd-icon {
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    background: #EA4335;
+    text-align: center;
+    line-height: 20px;
+    color: white;
+}
+
+.mapbox-logo {
+    display: none;
+}
+
+#humandesign,
+#dragondev {
+    position: relative;
+    height: auto;
+    min-height: 300px;
+    width: 100%;
+    color: #ffffff;
+    padding: 2% 2%;
+}
+
+#humandesign {
+    background-color: #3498db;
+    background-image: url("../img/hd.png");
+    background-repeat: no-repeat;
+    background-position: 92% 3px;
+    background-size: contain;
+}
+
+#humandesign a:hover,
+#dragondev a:hover {
+    opacity: .5;
+}
+
+#dragondev {
+    background-color: #E27A3F;
+}
+
+.title {
+    font-size: 55px;
+    font-weight: bold;
+    margin: 10px 0px;
+}
+
+.subtitle {
+    foint-size: 24;
+    font-weight: lighter;
+    margin: 10px 0px;
+}
+
+pre {
+    text-align: justify;
+    line-height: 140%;
+    white-space: pre;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -o-pre-wrap;
+}
+
+.tasks li:before {
+    position: absolute;
+    content: "\2022";
+}
+
+.tasks li {
+    text-align: justify;
+    line-height: 140%;
+}
+
+.tasks li p {
+    margin-left: 20px;
 }

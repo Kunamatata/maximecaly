@@ -3,6 +3,7 @@
 
 <head>
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.css' rel='stylesheet' />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="styles/normalize.css">
     <link rel="stylesheet" type="text/css" href="styles/style.css">
@@ -25,37 +26,59 @@
             </ul>
         </aside>
     </header>
-    <!--Hero Section-->
-    <section id="hero">
-        <div id="content">
-            <div id="greetings">
-                <h1><i class="fa fa-microphone"></i>Say Hello...</h1>
-                <div id="typed-greetings">
+    <div id="container">
+        <!--Hero Section-->
+        <section id="hero">
+            <div class="overlay"></div>
+            <div id="content">
+                <div id="greetings">
+                    <h1><i class="fa fa-microphone"></i>Say Hello...</h1>
+                    <div id="typed-greetings">
+                    </div>
                 </div>
             </div>
+        </section>
+        <div id="map">
         </div>
-    </section>
-    <!--experience Section-->
-    <section id="experience">
-        <div class="top-bar">
-            EXPERIENCES
+        <div id="humandesign">
+            <h1 class="title"><a href="http://www.humandesign.agency" target="_blank">HUMAN DESIGN</a></h1>
+            <h2 class="subtitle">Boulder, CO 80302</h2>
+            <p>
+                We create products that move the human race.
+                <br> Products that are rooted in the conviction that they must matter. They must contribute.
+                <br>
+                <br> Everything we craft is guided by these ideals, and driven by our intense passion to put good into the world.
+                <br>
+                <br>
+            </p>
         </div>
-        <div class="two columns">
-            <div class="vertical-center">
-                <h1>Human Design</h1>
-            </div>
+        <div id="dragondev">
+            <h1 class="title"><a href="http://www.dragondev.com" target="_blank">DRAGONDEV</a></h1>
+            <h2 class="subtitle">Boulder, CO 80302</h2>
+            <ul class="tasks">
+                <li>
+                    <p>Gathered and Analyzed specific client needs, scoped them with other team developers as well as creating prototyping projects to show a basic working application following the needs of the client</p>
+                </li>
+                <li>
+                    <p>Collaborated with Scrum Team daily to create client-focused software</p>
+                </li>
+                <li>
+                    <p>Acquired valuable web development knowledge as well as knew front end and back end technologies such as AngularJS, Firebase and Javascript/JQuery. Discovered new stacks such as MeteorJS</p>
+                </li>
+                <li>
+                    <p>Worked with Google Analytics to implement website traffic tracking on multiple websites</p>
+                </li>
+                <li>
+                    <p>Acquired valuable knowledge in both sprint methodology and team work in a Development shop environment</p>
+                </li>
+            </ul>
         </div>
-        <div class="two columns">
-            <div class="vertical-center">
-                <h1>Dragon Dev</h1>
-            </div>
-        </div>
-    </section>
+    </div>
     <!--<div id="userIP">
     </div>-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.3.1/trianglify.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/1.1.0/annyang.min.js"></script>
+    <script src='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.js'></script>
     <script type="text/javascript" src="https://l2.io/ip.js?var=userIP"></script>
     <script type="text/javascript" src="scripts/typed.js"></script>
     <script src="scripts/main.js"></script>
