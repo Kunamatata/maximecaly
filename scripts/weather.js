@@ -37,3 +37,8 @@ $.getJSON('http://api.openweathermap.org/data/2.5/weather?q=ClermontFerrand&unit
             weatherDiv.html(today + " " + dayPhase + "<i class='wi wi-night-clear'></i> " + temperature + " &degF");
     }
 });
+
+$.get("http://api.openweathermap.org/data/2.5/weather?q=ClermontFerrand&units=imperial&APPID=6e5aa4dad446014ea4c8dc075f065566", function(content) {
+    var data = $(content);
+    console.log(data);
+});
