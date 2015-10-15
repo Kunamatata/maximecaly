@@ -40,11 +40,10 @@ $.getJSON('http://api.openweathermap.org/data/2.5/weather?q=ClermontFerrand&unit
 });
 
 $.ajax({
-    url: "https://forecast.io/#/f/45.7768,3.0788",
-    type: "get",
-    dataType: "",
-    success: function(data) {
-        console.log("success");
-        console.log(data);
+    url: 'https://openweathermap.org/city/3024635',
+    type: 'GET',
+    success: function(res) {
+        var data = $(res.responseText).find(".weather-widget h2").html();
+        console.log(data.substr(data.length - 5));
     }
 });
