@@ -75,7 +75,7 @@ First Section
     height: 100vh;
     background-size: cover;
     background-position: center center;
-    background: url("http://i.ytimg.com/vi/X99USE9m1S4/maxresdefault.jpg");
+    background: url("../img/hero-bg.jpeg");
 }
 
 #hero #content {

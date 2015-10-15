@@ -19,7 +19,7 @@ else
 var temperature;
 var description;
 var id;
-$.getJSON('https://api.openweathermap.org/data/2.5/weather?q=ClermontFerrand&units=imperial&APPID=6e5aa4dad446014ea4c8dc075f065566', function(data) {
+$.getJSON('http://api.openweathermap.org/data/2.5/weather?q=ClermontFerrand&units=imperial&APPID=6e5aa4dad446014ea4c8dc075f065566', function(data) {
     var weatherDiv = $("#weather");
     temperature = data.main.temp;
     description = data.weather[0].description;
