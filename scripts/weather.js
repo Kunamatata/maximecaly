@@ -19,6 +19,7 @@ else
 var temperature;
 var description;
 var id;
+
 $.getJSON('http://api.openweathermap.org/data/2.5/weather?q=ClermontFerrand&units=imperial&APPID=6e5aa4dad446014ea4c8dc075f065566', function(data) {
     var weatherDiv = $("#weather");
     temperature = data.main.temp;
@@ -38,7 +39,12 @@ $.getJSON('http://api.openweathermap.org/data/2.5/weather?q=ClermontFerrand&unit
     }
 });
 
-$.get("http://api.openweathermap.org/data/2.5/weather?q=ClermontFerrand&units=imperial&APPID=6e5aa4dad446014ea4c8dc075f065566", function(content) {
-    var data = $(content);
-    console.log(data);
+$.ajax({
+    url: "https://forecast.io/#/f/45.7768,3.0788",
+    type: "get",
+    dataType: "",
+    success: function(data) {
+        console.log("success");
+        console.log(data);
+    }
 });
