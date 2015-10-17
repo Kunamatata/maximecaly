@@ -26,7 +26,7 @@ $.ajax({
         var nodes = $(res.responseText).find(".weather-widget").contents();
         var temperature = data.substr((data.length - 6), 4);
         temperature = temperature.trim();
-        console.log(temperature);
+
         var tempFahrenheit = temperature * 1.8 + 32; // Celsius to Fahrenheit conversion
         tempFahrenheit = tempFahrenheit.toFixed(1); // 1 decimal point
         var weatherDiv = $("#weather");
