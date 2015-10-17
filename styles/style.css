@@ -251,6 +251,7 @@ Map Stuff
 
 #humandesign {
     background-color: #3498db;
+    /*background-color: #343B99;*/
     background-image: url("../img/hd.png");
     background-repeat: no-repeat;
     background-position: 92% 3px;
@@ -264,6 +265,7 @@ Map Stuff
 
 #dragondev {
     background-color: #E27A3F;
+    /*background-color: #61BDF6;*/
 }
 
 .title {
