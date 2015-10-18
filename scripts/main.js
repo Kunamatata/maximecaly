@@ -110,3 +110,28 @@ dragonDevM.on("click", function() {
 humanDesignM.on("click", function() {
     slideToSection("#humandesign", 500);
 });
+
+console.log("%c         ", "color:green; background-color:yellow");
+
+var randRGB = [];
+
+for (var i = 0; i < 10; i++) {
+    randRGB.push({
+        r: Math.floor(Math.random() * 255),
+        g: Math.floor(Math.random() * 255),
+        b: Math.floor(Math.random() * 255)
+    });
+    console.log("%c ", "background-color: rgb(" + randRGB[i].r + "," + randRGB[i].g + "," + randRGB[i].b);
+
+}
+
+/*Random hero image*/
+
+var randImg = Math.floor(Math.random() * 2);
+console.log(randImg);
+if (randImg == 0)
+    $("#hero").addClass('herobg-1');
+else{
+    $("#hero").addClass('herobg-2');
+    $(".overlay").css("opacity","0.8");
+}

@@ -1,50 +1,83 @@
-       // Initialise an empty canvas and place it on the page
-       var canvas = document.getElementById("mainCanvas");
-       var context = canvas.getContext("2d");
-       canvas.width = 800;
-       canvas.height = 380;
+(function($) {
 
-       // Inital starting position
-       var posX = Math.random()*15,
-           posY = Math.random()*5 + 5;
+    /**
+     * Copyright 2012, Digital Fusion
+     * Licensed under the MIT license.
+     * http://teamdf.com/jquery-plugins/license/
+     *
+     * @author Sam Sehnert
+     * @desc A small plugin that checks whether elements are within
+     *       the user visible viewport of a web browser.
+     *       only accounts for vertical position, not horizontal.
+     */
+    var $w = $(window);
+    $.fn.visible = function(partial, hidden, direction) {
 
-       // Initial velocities
-       var vx = 10,
-           vy = -15,
-           gravity = 1;
+        if (this.length < 1)
+            return;
+
+        var $t = this.length > 1 ? this.eq(0) : this,
+            t = $t.get(0),
+            vpWidth = $w.width(),
+            vpHeight = $w.height(),
+            direction = (direction) ? direction : 'both',
+            clientSize = hidden === true ? t.offsetWidth * t.offsetHeight : true;
+
+        if (typeof t.getBoundingClientRect === 'function') {
+
+            // Use this native browser method, if available.
+            var rec = t.getBoundingClientRect(),
+                tViz = rec.top >= 0 && rec.top < vpHeight,
+                bViz = rec.bottom > 0 && rec.bottom <= vpHeight,
+                lViz = rec.left >= 0 && rec.left < vpWidth,
+                rViz = rec.right > 0 && rec.right <= vpWidth,
+                vVisible = partial ? tViz || bViz : tViz && bViz,
+                hVisible = partial ? lViz || rViz : lViz && rViz;
+
+            if (direction === 'both')
+                return clientSize && vVisible && hVisible;
+            else if (direction === 'vertical')
+                return clientSize && vVisible;
+            else if (direction === 'horizontal')
+                return clientSize && hVisible;
+        } else {
+
+            var viewTop = $w.scrollTop(),
+                viewBottom = viewTop + vpHeight,
+                viewLeft = $w.scrollLeft(),
+                viewRight = viewLeft + vpWidth,
+                offset = $t.offset(),
+                _top = offset.top,
+                _bottom = _top + $t.height(),
+                _left = offset.left,
+                _right = _left + $t.width(),
+                compareTop = partial === true ? _bottom : _top,
+                compareBottom = partial === true ? _top : _bottom,
+                compareLeft = partial === true ? _right : _left,
+                compareRight = partial === true ? _left : _right;
+
+            if (direction === 'both')
+                return !!clientSize && ((compareBottom <= viewBottom) && (compareTop >= viewTop)) && ((compareRight <= viewRight) && (compareLeft >= viewLeft));
+            else if (direction === 'vertical')
+                return !!clientSize && ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+            else if (direction === 'horizontal')
+                return !!clientSize && ((compareRight <= viewRight) && (compareLeft >= viewLeft));
+        }
+    };
+
+})(jQuery);
+
+setTimeout(function() {
+  $("#weather").removeClass('hidden');
+    $("#weather").addClass('come-in-right');
+  }, 1000)
 
 
-       setInterval(function() {
-           // Erase canvas
-           context.fillStyle = "black";
-           context.fillRect(0, 0, canvas.width, canvas.height);
-           posX += vx;
-           posY += vy;
-
-           if (posY > canvas.height) {
-               vy *= -0.85;
-               vx *= 0.75;
-           }
-           if (posY <= 0)
-               vy *= -0.2;
-
-           if (posY < canvas.height)
-               vy += gravity * 0.5;
-           if (posX > canvas.width) {
-               vx *= -0.8;
-           }
-           if (posX <= 0) {
-               vx *= -0.4;
-           }
-
-           // Draw a circle particle on the canvas
-           context.beginPath();
-           context.fillStyle = "white";
-           // After setting the fill style, draw an arc on the canvas
-           context.arc(posX, posY, 10, 0, Math.PI * 2, true);
-           context.closePath();
-           context.fill();
-
-
-
-       }, 20);
+$(window).scroll(function(event) {
+    if ($("#humandesign").visible(true)) {
+        $("#humandesign .title").addClass('come-in-left');
+    }
+    if ($("#dragondev").visible(true)) {
+        $("#dragondev .title").addClass('come-in-right');
+    }
+});
