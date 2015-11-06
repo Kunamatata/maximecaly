@@ -11,7 +11,7 @@ $(document).ready(function() {
         annyang.addCommands(commands);
         annyang.start();
     }
-    setInterval(function() {
+
         $.getJSON('https://api.twitch.tv/kraken/streams/kunamatataeu', function(data) {
             /*If the stream object exists then stream is live*/
             if (data.stream != null) {
@@ -19,8 +19,6 @@ $(document).ready(function() {
                 $("#stream-text").html("Stream Online");
             }
         });
-    }, 60000);
-
 });
 
 /*

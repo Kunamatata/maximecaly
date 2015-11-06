@@ -16,35 +16,28 @@ else if (dayTime > "12:00" && dayTime < "17:00")
 else
     dayPhase = "evening";
 
-/* Weather issue use = > https://developer.forecast.io/
 $.ajax({
-    url: 'https://openweathermap.org/city/3024635',
-    type: 'GET',
-    success: function(res) {
+    url: "https://api.forecast.io/forecast/83b001117aa8aa483d584ae0e6bccc74/45.787119,3.0777067",
+    dataType: "jsonp",
+    success: function(data) {
 
-        var data = $(res.responseText).find(".weather-widget h2").html();
-        var nodes = $(res.responseText).find(".weather-widget").contents();
-        console.log(data);
-        var temperature = data.substr((data.length - 6), 4);
-        console.log(temperature);
-        temperature = temperature.trim();
-
-        var tempFahrenheit = temperature * 1.8 + 32; // Celsius to Fahrenheit conversion
-        tempFahrenheit = tempFahrenheit.toFixed(1); // 1 decimal point
         var weatherDiv = $("#weather");
 
-        var description = $.trim(nodes[4].data);
-
-        if (description == "Clouds") {
+        var currently = data.currently;
+        var summary = data.currently.summary;
+        var temperature = data.currently.temperature;
+        console.log(summary);
+        console.log(temperature);
+        if (summary == "Mostly Cloudy") {
             if (dayPhase == "morning" || dayPhase == "afternoon")
-                weatherDiv.html(today + " " + dayPhase + "<i class='wi wi-day-cloudy'></i> " + tempFahrenheit + " &degF");
+                weatherDiv.html(today + " " + dayPhase + "<i class='wi wi-day-cloudy'></i> " + temperature + " &degF");
             else
-                weatherDiv.html(today + " " + dayPhase + "<i class='wi wi-night-alt-cloudy'></i> " + tempFahrenheit + " &degF");
-        } else if (description == "Clear") {
+                weatherDiv.html(today + " " + dayPhase + "<i class='wi wi-night-alt-cloudy'></i> " + temperature + " &degF");
+        } else if (summary == "Clear") {
             if (dayPhase == "morning" || dayPhase == "afternoon")
-                weatherDiv.html(today + " " + dayPhase + "<i class='wi wi-day-sunny'></i> " + tempFahrenheit + " &degF");
+                weatherDiv.html(today + " " + dayPhase + "<i class='wi wi-day-sunny'></i> " + temperature + " &degF");
             else
-                weatherDiv.html(today + " " + dayPhase + "<i class='wi wi-night-clear'></i> " + tempFahrenheit + " &degF");
+                weatherDiv.html(today + " " + dayPhase + "<i class='wi wi-night-clear'></i> " + temperature + " &degF");
         }
     }
-});*/
+});
