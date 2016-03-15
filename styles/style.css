@@ -457,3 +457,43 @@ Animations
     animation: come-in-right 1s ease forwards;
     opacity: 0.3;
 }
+
+/***********************************
+    #character-sprite
+************************************/
+
+#character-sprite{
+    width: 33px;
+    height: 33px;
+    background-image: url("../img/images/slices_02.png");
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 10000;
+}
+
+#character-sprite.right-left{
+    background-image: url("../img/images/slices_08.png");
+}
+
+#character-sprite.right-stand{
+    background-image: url("../img/images/slices_09.png");
+}
+
+#character-sprite.right-right{
+    background-image: url("../img/images/slices_10.png");
+}
+
+#character-sprite.left-left{
+    background-image: url("../img/images/slices_05.png");
+}
+
+#character-sprite.left-stand{
+    background-image: url("../img/images/slices_06.png");
+}
+
+#character-sprite.left-right{
+    background-image: url("../img/images/slices_07.png");
+}
+

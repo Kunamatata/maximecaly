@@ -16,6 +16,7 @@ else if (dayTime > "12:00" && dayTime < "17:00")
 else
     dayPhase = "evening";
 
+/*Using Forecast.io api*/
 $.ajax({
     url: "https://api.forecast.io/forecast/83b001117aa8aa483d584ae0e6bccc74/45.787119,3.0777067",
     dataType: "jsonp",
@@ -26,8 +27,7 @@ $.ajax({
         var currently = data.currently;
         var summary = data.currently.summary;
         var temperature = data.currently.temperature;
-        console.log(summary);
-        console.log(temperature);
+
         if (summary == "Mostly Cloudy") {
             if (dayPhase == "morning" || dayPhase == "afternoon")
                 weatherDiv.html(today + " " + dayPhase + "<i class='wi wi-day-cloudy'></i> " + temperature + " &degF");
