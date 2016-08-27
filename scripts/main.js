@@ -207,6 +207,4 @@ $("body").keydown(function(event) {
         characterSprite.removeAttr('class');
         characterSprite.addClass('stand');
     }
-
-    return false;
 });
