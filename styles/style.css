@@ -15,14 +15,22 @@ a {
     transition: all .3s ease-out;
 }
 
-body{
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
     overflow-x: hidden;
+    height: 100%;
+    width: 100%;
 }
 
 
 /************************************
     Header
 ************************************/
+
 header {
     position: absolute;
     width: 100%;
@@ -456,11 +464,12 @@ Animations
     opacity: 0.3;
 }
 
+
 /***********************************
     #character-sprite
 ************************************/
 
-#character-sprite{
+#character-sprite {
     width: 33px;
     height: 33px;
     background-image: url("../img/images/slices_02.png");
@@ -471,27 +480,27 @@ Animations
     z-index: 10000;
 }
 
-#character-sprite.right-left{
+#character-sprite.right-left {
     background-image: url("../img/images/slices_08.png");
 }
 
-#character-sprite.right-stand{
+#character-sprite.right-stand {
     background-image: url("../img/images/slices_09.png");
 }
 
-#character-sprite.right-right{
+#character-sprite.right-right {
     background-image: url("../img/images/slices_10.png");
 }
 
-#character-sprite.left-left{
+#character-sprite.left-left {
     background-image: url("../img/images/slices_05.png");
 }
 
-#character-sprite.left-stand{
+#character-sprite.left-stand {
     background-image: url("../img/images/slices_06.png");
 }
 
-#character-sprite.left-right{
+#character-sprite.left-right {
     background-image: url("../img/images/slices_07.png");
 }
 
@@ -499,10 +508,12 @@ Animations
 /***********************************
     SCROLLBAR
 ************************************/
+
 ::-webkit-scrollbar {
     width: 14px;
     height: 14px;
 }
+
 ::-webkit-scrollbar-track {
     border-raidus: 5px;
     background-color: #36393e;
@@ -512,4 +523,58 @@ Animations
     border-radius: 100px;
     background-color: #1e2124;
     border: 2px solid #36393e;
+}
+
+
+/***********************************
+    SURPRISE
+************************************/
+
+#countdown-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../img/Botanical-Gardens-Anna-Max.jpg");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#countdown {
+    display: flex;
+    flex-flow: column;
+    min-height: 125px;
+    width: 300px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    color: #fff;
+    -webkit-transition: background 2s ease-out;
+    -moz-transition: background 2s ease-out;
+    transition: background 2s ease-out;
+    animation: fadeIn 2s ease-out forwards;
+}
+
+#countdown h2 {
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+}
+
+#countdown p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    animation: fadeIn 5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
