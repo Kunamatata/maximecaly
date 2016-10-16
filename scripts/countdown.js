@@ -1,3 +1,5 @@
+var moment = require('moment')
+
 var countdown = document.querySelector("#countdown")
 var timer = document.querySelector("#countdown .timer")
 var hourTimer = document.querySelector("#countdown .hour-timer")
@@ -10,6 +12,7 @@ var colors = [
     "rgba(77,114,152,.50)",
     "rgba(232,93,117,.50)"
 ]
+var ok = "ok"
 var meetWithAnna = moment("2016 10 25", "YYYY MM DD").valueOf() / 1000
 var now = moment().valueOf() / 1000
 var timeLeft = Math.floor(meetWithAnna - now)

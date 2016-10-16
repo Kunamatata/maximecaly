@@ -148,6 +148,13 @@ header aside .icons:hover {
 Second Section
 ************************************/
 
+.internships{
+    background-color: #0082C8;
+    text-align: center;
+    color: #fff;
+    padding: 20px 0;
+}
+
 #experience {
     position: relative;
     width: 100%;
@@ -291,6 +298,7 @@ Map Stuff
 }
 
 .title {
+    opacity: 0;
     font-size: 55px;
     font-weight: bold;
     margin: 10px 0px;
@@ -515,7 +523,7 @@ Animations
 }
 
 ::-webkit-scrollbar-track {
-    border-raidus: 5px;
+    border-radius: 5px;
     background-color: #36393e;
 }
 

@@ -4,7 +4,8 @@
 // Metric = Celsius / Imperial = Fahrenheit
 
 /*Day Data*/
-
+var moment = require('moment');
+var $ = require('jquery')
 var today = moment().format("dddd");
 var dayTime = moment().format("HH:mm");
 var dayPhase;

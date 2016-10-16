@@ -1,3 +1,6 @@
+var $ = require('jquery');
+var typed = require('typed.js');
+var annyang = require('annyang');
 $(document).ready(function () {
     var once = 1
     if (annyang && once == 1) {
@@ -65,7 +68,6 @@ var greetings = function () {
                 setTimeout(function () {
                     slideToSection("#map", 500);
                 }, 2000);
-
             }
         });
         x
