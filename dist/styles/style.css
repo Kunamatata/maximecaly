@@ -1,0 +1,603 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+    text-decoration: none;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+a {
+    color: #ffffff;
+    transition: all .3s ease-out;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+
+/************************************
+    Header
+************************************/
+
+header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    padding: 15px;
+    z-index: 1000;
+}
+
+ul {
+    list-style: none;
+}
+
+header aside {
+    float: left;
+    margin-left: 30px;
+}
+
+header aside ul li {
+    display: inline-block;
+}
+
+header aside .fa-2x {
+    font-size: 1.5em;
+    padding-right: 5px;
+}
+
+header aside .social-icons {
+    line-height: 60px;
+}
+
+header aside .icons {
+    display: inline-block;
+    color: #ffffff;
+    transition: all .3s ease-in;
+}
+
+header aside .icons:hover {
+    opacity: 0.5;
+}
+
+
+/***********************************
+    First Section
+************************************/
+
+#container {
+    width: 100%;
+}
+
+#hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.herobg-1 {
+    background: url("../img/hero-2bg.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+
+.herobg-2 {
+    background: url("../img/hero-bg.jpeg");
+    background-size: cover;
+    background-position: center center;
+}
+
+#hero #content {
+    width: 100%;
+    text-align: justify;
+    margin: 0 auto;
+    padding: 4rem 1rem;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 50;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    background: #000000;
+}
+
+#greetings {
+    padding: 5% 10%;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    transition: all .5s ease-out;
+}
+
+#greetings h1 {
+    font-size: 75px;
+    transition: all .7s ease-out;
+}
+
+#greetings .fa.fa-microphone {
+    font-size: 42px;
+    margin-right: 20px;
+    z-index: 10;
+    cursor: pointer;
+    transition: all .5s ease-out;
+}
+
+#greetings .fa.fa-microphone:hover {
+    opacity: 0.5;
+    transition: all .5s ease-out;
+}
+
+
+/***********************************
+Second Section
+************************************/
+
+.internships{
+    background-color: #0082C8;
+    text-align: center;
+    color: #fff;
+    padding: 20px 0;
+}
+
+#experience {
+    position: relative;
+    width: 100%;
+    height: 75vh;
+    min-height: 75vh;
+    transition: all .5s ease-out;
+}
+
+#experience .top-bar {
+    height: 100px;
+    color: #ffffff;
+    text-align: center;
+    padding: 1% 5%;
+    font-size: 52px;
+    background-color: #404040;
+}
+
+#experience .columns h1 {
+    text-align: center;
+    font-size: 52px;
+}
+
+#experience .columns:nth-child(2) {
+    background-color: #EF734E;
+}
+
+#experience .columns:nth-child(3) {
+    background-color: #AAF267;
+}
+
+.vertical-center {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+
+/*********
+Typed Stuff
+*********/
+
+#typed-greetings {
+    font-size: 20px;
+    line-height: 140%;
+    opacity: .9;
+}
+
+
+/*********
+Column Stuff
+*********/
+
+.columns {
+    float: left;
+    height: 100%;
+}
+
+.one.columns,
+.one.column {
+    width: 100%;
+}
+
+.two.columns {
+    width: 50%;
+}
+
+.hidden {
+    opacity: 0;
+    transition: all .5 ease-out;
+}
+
+.visible {
+    opacity: 1;
+    transition: all .5 ease-out;
+}
+
+
+/*********
+Map Stuff
+**********/
+
+#map {
+    width: 100%;
+    height: 65vh;
+}
+
+.hd-icon {
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    background: #63b6e5;
+    text-align: center;
+    line-height: 20px;
+    color: white;
+}
+
+.dd-icon {
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    background: #EA4335;
+    text-align: center;
+    line-height: 20px;
+    color: white;
+}
+
+.mapbox-logo {
+    display: none;
+}
+
+#humandesign,
+#dragondev {
+    position: relative;
+    height: auto;
+    min-height: 300px;
+    width: 100%;
+    color: #ffffff;
+    padding: 2% 2%;
+}
+
+#humandesign {
+    background-color: #3498db;
+    /*background-color: #343B99;*/
+    background-image: url("../img/hd-min.png");
+    background-repeat: no-repeat;
+    background-position: 92% 3px;
+    background-size: contain;
+    overflow: hidden;
+}
+
+#humandesign a:hover,
+#dragondev a:hover {
+    opacity: .5;
+}
+
+#dragondev {
+    background-color: #E27A3F;
+    overflow: hidden;
+    /*background-color: #61BDF6;*/
+}
+
+.title {
+    opacity: 0;
+    font-size: 55px;
+    font-weight: bold;
+    margin: 10px 0px;
+}
+
+.subtitle {
+    font-size: 24;
+    font-weight: lighter;
+    margin: 10px 0px;
+}
+
+#humandesign p {
+    line-height: 140%;
+}
+
+pre {
+    text-align: justify;
+    line-height: 140%;
+    white-space: pre;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -o-pre-wrap;
+}
+
+.tasks li:before {
+    position: absolute;
+    content: "\2022";
+}
+
+.tasks li {
+    text-align: justify;
+    line-height: 140%;
+}
+
+.tasks li p {
+    margin-left: 20px;
+}
+
+.stream-status {
+    position: relative;
+    cursor: pointer;
+}
+
+.stream-circle {
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    top: 13px;
+    background-color: red;
+    animation-name: bounce-inner;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    opacity: .2;
+    background-color: red;
+    border-radius: 100%;
+}
+
+.stream-circle:nth-child(1) {
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    top: 13px;
+    background-color: red;
+    animation-name: bounce-outer;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    opacity: .5;
+    background-color: red;
+    border-radius: 100%;
+}
+
+#stream-text {
+    display: inline-block;
+    color: #ffffff;
+    margin-left: 30px;
+}
+
+
+/************************************
+Weather
+************************************/
+
+#weather {
+    position: absolute;
+    color: #ffffff;
+    right: 45px;
+    top: 15px;
+    font-size: 16px;
+}
+
+.wi {
+    font-size: 25px;
+    padding: 10px;
+    vertical-align: middle;
+}
+
+
+/************************************
+Animations
+************************************/
+
+@keyframes bounce-inner {
+    0% {
+        transform: scale(.2);
+        opacity: .8;
+    }
+    50% {
+        transform: scale(.3);
+        opacity: .6;
+    }
+    100% {
+        transform: scale(.4);
+        opacity: .4;
+    }
+}
+
+@keyframes bounce-outer {
+    0% {
+        transform: scale(.7);
+        opacity: .5;
+    }
+    100% {
+        transform: scale(.5);
+        opacity: .2;
+    }
+}
+
+.come-in {
+    animation: come-in 1s ease forwards;
+    opacity: 0.3;
+}
+
+@keyframes come-in {
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes come-in-left {
+    to {
+        transform: translateY(0px);
+        /*transform: translateX(0px);*/
+        opacity: 1;
+    }
+}
+
+@keyframes come-in-right {
+    to {
+        transform: translateY(0px);
+        /*transform: translateX(0px);*/
+        opacity: 1;
+    }
+}
+
+.come-in-left {
+    transform: translateX(-400px);
+    animation: come-in-left 1s ease forwards;
+    opacity: 0.3;
+}
+
+.come-in-right {
+    transform: translateX(400px);
+    animation: come-in-right 1s ease forwards;
+    opacity: 0.3;
+}
+
+
+/***********************************
+    #character-sprite
+************************************/
+
+#character-sprite {
+    width: 33px;
+    height: 33px;
+    background-image: url("../img/images/slices_02.png");
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 10000;
+}
+
+#character-sprite.right-left {
+    background-image: url("../img/images/slices_08.png");
+}
+
+#character-sprite.right-stand {
+    background-image: url("../img/images/slices_09.png");
+}
+
+#character-sprite.right-right {
+    background-image: url("../img/images/slices_10.png");
+}
+
+#character-sprite.left-left {
+    background-image: url("../img/images/slices_05.png");
+}
+
+#character-sprite.left-stand {
+    background-image: url("../img/images/slices_06.png");
+}
+
+#character-sprite.left-right {
+    background-image: url("../img/images/slices_07.png");
+}
+
+
+/***********************************
+    SCROLLBAR
+************************************/
+
+::-webkit-scrollbar {
+    width: 14px;
+    height: 14px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: #36393e;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    background-color: #1e2124;
+    border: 2px solid #36393e;
+}
+
+
+/***********************************
+    SURPRISE
+************************************/
+
+#countdown-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    overflow: hidden;
+    transform: scale(1.3);
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    background-image: url("../img/Botanical-Gardens-Anna-Max.jpg");
+}
+
+#countdown {
+    display: flex;
+    flex-flow: column;
+    min-height: 125px;
+    width: 300px;
+    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    color: #fff;
+    -webkit-transition: background 2s ease-out;
+    -moz-transition: background 2s ease-out;
+    transition: background 2s ease-out;
+    animation: fadeIn 2s ease-out forwards;
+}
+
+#countdown h3 {
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+}
+
+#countdown h3:first-child{
+    padding-bottom: 10px;
+}
+
+#countdown p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    animation: fadeIn 5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

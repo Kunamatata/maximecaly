@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Maxime Caly Software Engineer</title>
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<link href='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.css' rel='stylesheet' />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto&subset=latin,greek' rel='stylesheet' type='text/css'>
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="styles/weather-icons-wind.min.css">
+	<link rel="stylesheet" type="text/css" href="styles/weather-icons.min.css">
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+
+<body>
+	<!--Header Section-->
+	<header>
+		<aside>
+			<ul class="social-icons">
+				<li>
+					<a class="icons" href="//github.com/Kunamatata" target="_blank"></i><i class="fa fa-github fa-2x"></i></a>
+				</li>
+				<li>
+					<a class="icons" href="https://twitter.com/TheKunamatata" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
+				</li>
+				<li>
+					<a href="https://twitch.tv/kunamatataeu">
+						<div class="stream-status">
+							<div class="stream-circle"></div>
+							<div class="stream-circle"></div>
+							<p id="stream-text">Stream Offline</p>
+						</div>
+					</a>
+				</li>
+				<!-- Add cloud icon and change it with jquery -->
+				<!-- <i class="wi wi-day-cloudy"> -->
+			</ul>
+			<div id="weather" class="hidden"></div>
+		</aside>
+	</header>
+	<div id="character-sprite" class="stand">
+	</div>
+	<div id="container">
+		<!--Hero Section-->
+		<section id="hero">
+			<div class="overlay"></div>
+			<div id="content">
+				<div id="greetings">
+					<h1><i class="fa fa-microphone"></i>Say Hello...</h1>
+					<div id="typed-greetings">
+					</div>
+				</div>
+			</div>
+		</section>
+		<div id="map">
+		</div>
+		<h1 class="internships">Internships</h1>
+		<div id="humandesign">
+			<h1 class="title"><a href="http://www.humandesign.agency" target="_blank">HUMAN DESIGN</a></h1>
+			<h2 class="subtitle">Boulder, CO 80302 - April 2016 - present</h2>
+			<p>Front and back end Web Developer at Human Design</p>
+			<ul>
+				<li>• Learned and used new technologies for developing web applications both front and back end</li>
+				<li>• Tested new features with Mocha to confirm that they were functional</li>
+				<li>• Implemented REST API with Express and MongoDB and added endpoints</li>
+				<li>• Created front end pages with dynamic Mithril views through VDOM</li>
+				<li>• Acquired a sharp understanding of user experience and how to write efficient and maintainable code</li>
+				<li>• Gained extremely valuable knowledge about both front end and back end development. Especially server side with Express
+					and MongoDB</li>
+			</ul>
+			</p>
+		</div>
+		<div id="dragondev">
+			<h1 class="title"><a href="http://www.dragondev.com" target="_blank">DRAGONDEV</a></h1>
+			<h2 class="subtitle">Boulder, CO 80302 - April 2015 - July 2016</h2>
+			<ul class="tasks">
+				<li>
+					<p>Gathered and Analyzed specific client needs, scoped them with other team developers as well as creating prototyping
+						projects to show a basic working application following the needs of the client</p>
+				</li>
+				<li>
+					<p>Collaborated with Scrum Team daily to create client-focused software</p>
+				</li>
+				<li>
+					<p>Acquired valuable web development knowledge as well as knew front end and back end technologies such as AngularJS, Firebase
+						and Javascript/JQuery. Discovered new stacks such as MeteorJS</p>
+				</li>
+				<li>
+					<p>Worked with Google Analytics to implement website traffic tracking on multiple websites</p>
+				</li>
+				<li>
+					<p>Acquired valuable knowledge in both sprint methodology and team work in a Development shop environment</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!--<div id="userIP">
+    </div>-->
+	<!-- Google Analytics -->
+	<script src='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.js'></script>
+	<script>
+        (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-68142753-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+<script type="text/javascript" src="./scripts/weather.js"></script><script type="text/javascript" src="./scripts/main.js"></script><script type="text/javascript" src="./scripts/animations.js"></script></body>
+
+</html>
