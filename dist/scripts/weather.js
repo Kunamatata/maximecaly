@@ -57,38 +57,37 @@
 	var dayPhase;
 
 	if (dayTime >= "00:00" && dayTime <= "12:00")
-	    dayPhase = "morning";
+	  dayPhase = "morning";
 	else if (dayTime > "12:00" && dayTime < "17:00")
-	    dayPhase = "afternoon";
+	  dayPhase = "afternoon";
 	else
-	    dayPhase = "evening";
+	  dayPhase = "evening";
 
 	/*Using Forecast.io api*/
 	$.ajax({
-	    url: "https://api.forecast.io/forecast/83b001117aa8aa483d584ae0e6bccc74/45.787119,3.0777067",
-	    dataType: "jsonp",
-	    success: function(data) {
+	  url: "https://api.forecast.io/forecast/83b001117aa8aa483d584ae0e6bccc74/45.787119,3.0777067",
+	  dataType: "jsonp",
+	  success: function(data) {
 
-	        var weatherDiv = $("#weather");
+	    var weatherDiv = $("#weather");
 
-	        var currently = data.currently;
-	        var summary = data.currently.summary;
-	        var temperature = data.currently.temperature;
+	    var currently = data.currently;
+	    var summary = data.currently.summary;
+	    var temperature = data.currently.temperature;
 
-	        if (summary == "Mostly Cloudy") {
-	            if (dayPhase == "morning" || dayPhase == "afternoon")
-	                weatherDiv.html(today + " " + dayPhase + "<i class='wi wi-day-cloudy'></i> " + temperature + " &degF");
-	            else
-	                weatherDiv.html(today + " " + dayPhase + "<i class='wi wi-night-alt-cloudy'></i> " + temperature + " &degF");
-	        } else if (summary == "Clear") {
-	            if (dayPhase == "morning" || dayPhase == "afternoon")
-	                weatherDiv.html(today + " " + dayPhase + "<i class='wi wi-day-sunny'></i> " + temperature + " &degF");
-	            else
-	                weatherDiv.html(today + " " + dayPhase + "<i class='wi wi-night-clear'></i> " + temperature + " &degF");
-	        }
+	    if (summary == "Mostly Cloudy") {
+	      if (dayPhase == "morning" || dayPhase == "afternoon")
+	        weatherDiv.html(today + " " + dayPhase + "<i class='wi wi-day-cloudy'></i> " + temperature + " &degF");
+	      else
+	        weatherDiv.html(today + " " + dayPhase + "<i class='wi wi-night-alt-cloudy'></i> " + temperature + " &degF");
+	    } else if (summary == "Clear") {
+	      if (dayPhase == "morning" || dayPhase == "afternoon")
+	        weatherDiv.html(today + " " + dayPhase + "<i class='wi wi-day-sunny'></i> " + temperature + " &degF");
+	      else
+	        weatherDiv.html(today + " " + dayPhase + "<i class='wi wi-night-clear'></i> " + temperature + " &degF");
 	    }
+	  }
 	});
-
 
 /***/ },
 /* 1 */

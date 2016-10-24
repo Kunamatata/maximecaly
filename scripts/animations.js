@@ -4,7 +4,7 @@ var $ = require('jquery')
 $.fn.extend({
   visible: function() {
     var rect = this[0].getBoundingClientRect()
-    
+
     return (
       rect.top >= 0 &&
       rect.left >= 0 &&
